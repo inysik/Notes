@@ -26,7 +26,7 @@ export function ModalWin({
       {open && (
         <div className="modal-backdrop" onClick={handleClose}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <h3>Текущая заметка: {note}!</h3>
+            <h3>Current note: {note}!</h3>
             <Input
               className="btn"
               value={note}

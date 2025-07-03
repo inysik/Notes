@@ -28,31 +28,35 @@ body {
   box-shadow: 0 4px 8px rgba(124, 58, 237, 0.4);
   cursor: pointer;
 }
+
 .plus:hover {
   box-shadow: 0 4px 12px rgba(124, 58, 237, 0.6);
 }
 
-.btn{
+.btn {
   height: 34px;
   border: 1px solid rgb(138, 73, 202);
   border-radius: 5px;
   padding: 0 15px;
   margin: 0px 20px;
 }
-.flex{
+
+.flex {
   margin-top: 15px;
   display: flex;
 
 }
-.title{
+
+.title {
   color: rgb(113, 20, 113);
 
   margin: 10px 20px;
   text-align: center;
-    font-family:'Courier New', Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
 
 
 }
+
 .button {
   background: linear-gradient(135deg, #8b5cf6, #6d28d9);
   color: #ffffff;
@@ -65,9 +69,11 @@ body {
   box-shadow: 0 3px 5px rgba(124, 58, 237, 0.4);
   cursor: pointer;
 }
+
 .button:hover {
   opacity: 0.9;
 }
+
 .list {
   background-color: #f3e8ff;
   padding: 20px;
@@ -79,36 +85,41 @@ body {
   gap: 5px;
 }
 
-.list-item{
+.list-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 16px;
-  font-family:'Courier New', Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
   font-weight: 500;
-  
-}
-input::placeholder{
-    font-family:'Courier New', Courier, monospace;
 
 }
-input{
-    box-shadow:
+
+input::placeholder {
+  font-family: 'Courier New', Courier, monospace;
+
+}
+
+input {
+  box-shadow:
     0 1px rgba(141, 121, 213, 0.2) inset,
     0 3px 5px rgba(213, 28, 223, 0.5),
     0 0 1px 1px rgba(106, 15, 139, 0.2);
 }
-.modal-content{
+
+.modal-content {
   background-color: antiquewhite;
-margin: 10px 20px;
-padding: 10px 20px;
-font-family: 'Courier New', Courier, monospace;
-border-radius: 10px;
-    box-shadow:
+  margin: 10px 20px;
+  padding: 10px 20px;
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 10px;
+  box-shadow:
     0 1px rgba(141, 121, 213, 0.2) inset,
     0 3px 5px rgba(213, 28, 223, 0.5),
     0 0 1px 1px rgba(106, 15, 139, 0.2);
-}.modal-backdrop {
+}
+
+.modal-backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -120,6 +131,19 @@ border-radius: 10px;
   justify-content: center;
   z-index: 999;
 }
-.list-btn{
+
+.list-btn {
   display: flex;
+}
+
+@media (max-width:500px) {
+  .flex {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  .btn{
+    margin-bottom: 10px;
+  }
+
 }

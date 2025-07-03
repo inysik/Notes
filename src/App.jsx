@@ -17,12 +17,10 @@ export function App() {
 
   // СОХРАНЕНИЕ ПОСЛЕ ИЗМЕНЕНИЙ:
   useEffect(() => {
-    console.log(2, notes);
     localStorage.setItem("myNotes", JSON.stringify(notes));
   }, [notes]);
 
   function handleAddNote() {
-    console.log(note, "333");
     if (note.trim() === "") return;
     setNotes([...notes, { note: note, id: Math.random() }]);
     setNote("");
@@ -39,14 +37,14 @@ export function App() {
 
   return (
     <>
-      <h1 className="title">Заметки</h1>
+      <h1 className="title">Notes 🗒️</h1>
       <div className="flex">
         <form onSubmit={(e) => e.preventDefault()}>
           <Input
             className="btn"
             type="search"
             name="search-text"
-            placeholder="Поиск заметки"
+            placeholder="search"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
@@ -57,7 +55,7 @@ export function App() {
           className="btn"
           type="text"
           name="note"
-          placeholder="Добавить заметку"
+          placeholder="add note"
           onChange={(e) => setNote(e.target.value)}
           onKeyDown={(e) => {
             if (e.keyCode === 13) {
@@ -92,7 +90,7 @@ export function App() {
               </li>
             ))
           ) : (
-            <li style={{ opacity: 0.5 }}>Ничего не найдено</li>
+            <li style={{ opacity: 0.5 }}>not found!</li>
           )}
         </ul>
       </div>
